@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benjamin Afful Bonney | Physics Teacher and GCSE Science and Maths Tutor</title>
+<meta name="description" content="Benjamin Afful Bonney: trainee teacher of physics and founder of Think Science, Think Maths, offering online small-group GCSE science and maths tutoring.">
+<style>
+  :root {
+    --ink: #14213d;
+    --ink-soft: #3d4a66;
+    --paper: #faf7f1;
+    --card: #ffffff;
+    --line: #e4ddd0;
+    --amber: #e8973a;
+    --amber-deep: #b96a14;
+    --teal: #1f6f6b;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+    font-weight: 700;
+  }
+  a { color: var(--teal); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* Navigation */
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250, 247, 241, 0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+  .brand { font-family: Georgia, serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+  .nav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; }
+  .nav nav a:hover { color: var(--amber-deep); }
+
+  /* Hero */
+  .hero { padding: 84px 0 72px; border-bottom: 1px solid var(--line); }
+  .hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--amber-deep); font-weight: 700; margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+  .hero p.lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 34em; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 6px;
+    text-decoration: none; font-weight: 600; font-size: 0.98rem;
+    border: 2px solid var(--ink);
+  }
+  .btn.primary { background: var(--ink); color: #fff; }
+  .btn.primary:hover { background: #0c1730; }
+  .btn.ghost { color: var(--ink); background: transparent; }
+  .btn.ghost:hover { background: var(--ink); color: #fff; }
+
+  /* Hero equation card */
+  .board {
+    background: var(--ink); color: #f4efe4; border-radius: 14px;
+    padding: 30px 28px; box-shadow: 10px 10px 0 var(--amber);
+    font-family: Georgia, serif;
+  }
+  .board .eq { font-size: 1.7rem; font-style: italic; margin: 6px 0; }
+  .board .eq span { color: var(--amber); }
+  .board hr { border: 0; border-top: 1px dashed rgba(244, 239, 228, 0.3); margin: 16px 0; }
+  .board small { font-family: "Segoe UI", system-ui, sans-serif; font-style: normal; font-size: 0.82rem; opacity: 0.75; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  section.alt { background: #f2ede2; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  section h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
+  .intro { color: var(--ink-soft); max-width: 44em; margin-bottom: 36px; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+  /* Timeline */
+  .timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--amber); }
+  .timeline li { padding: 0 0 26px 24px; position: relative; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -7px; top: 8px;
+    width: 12px; height: 12px; border-radius: 50%; background: var(--amber);
+  }
+  .timeline h3 { font-size: 1.08rem; margin-bottom: 2px; }
+  .timeline .where { color: var(--teal); font-weight: 600; font-size: 0.95rem; }
+  .timeline p { margin: 6px 0 0; color: var(--ink-soft); font-size: 0.97rem; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 24px; }
+  .card h3 { font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+  .num { font-family: Georgia, serif; font-size: 1.6rem; color: var(--amber-deep); font-weight: 700; display: block; margin-bottom: 6px; }
+
+  .subjects { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 36px; padding: 0; list-style: none; }
+  .subjects li { background: var(--ink); color: #fff; padding: 7px 16px; border-radius: 999px; font-size: 0.92rem; font-weight: 600; }
+
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .steps li { counter-increment: s; padding-top: 14px; border-top: 3px solid var(--ink); }
+  .steps li::before { content: "Step " counter(s); display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber-deep); font-weight: 700; margin-bottom: 6px; }
+  .steps strong { display: block; font-family: Georgia, serif; font-size: 1.05rem; margin-bottom: 4px; }
+  .steps span { color: var(--ink-soft); font-size: 0.96rem; }
+
+  /* Contact */
+  .contact { background: var(--ink); color: #f4efe4; text-align: center; }
+  .contact h2 { color: #fff; }
+  .contact p { max-width: 36em; margin: 0 auto 26px; opacity: 0.88; }
+  .contact .btn { border-color: var(--amber); }
+  .contact .btn.primary { background: var(--amber); color: var(--ink); }
+  .contact .btn.primary:hover { background: #f4ab55; }
+  .contact .btn.ghost { color: #fff; border-color: rgba(255,255,255,0.6); }
+  .contact .btn.ghost:hover { background: #fff; color: var(--ink); }
+  .contact .btns { justify-content: center; }
+
+  footer { padding: 26px 0; font-size: 0.88rem; color: var(--ink-soft); text-align: center; }
+
+  @media (max-width: 820px) {
+    .hero { padding: 56px 0; }
+    .hero .wrap, .two, .cards, .steps { grid-template-columns: 1fr; }
+    .nav nav { gap: 14px; }
+    section { padding: 54px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Benjamin Afful Bonney</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#tutoring">Tutoring</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Physics teacher · Science and maths tutor</div>
+        <h1>Making science and maths make sense.</h1>
+        <p class="lead">I'm Benjamin, a trainee teacher of physics with an engineering background. I also run Think Science, Think Maths, offering online small-group tutoring for GCSE students.</p>
+        <div class="btns">
+          <a class="btn primary" href="#tutoring">See tutoring</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="board" aria-hidden="true">
+        <div class="eq">F = <span>m</span>a</div>
+        <div class="eq">v = <span>f</span>λ</div>
+        <div class="eq">E = <span>m</span>c²</div>
+        <hr>
+        <small>Clear explanations. Exam technique. Regular practice.</small>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap two">
+      <div>
+        <h2>About me</h2>
+        <p>I am training to teach physics at secondary level with the National Institute of Teaching, working towards a PGCE, and I am currently on school placement at Laisterdyke Leadership Academy, part of Star Academies.</p>
+        <p>Before teaching, I studied Biomedical Engineering and trained in clinical engineering at Korle-Bu Teaching Hospital. That experience shapes how I teach: I like to show students where physics appears in real equipment and real problems.</p>
+      </div>
+      <div>
+        <h2>How I teach</h2>
+        <p>I have worked as a SEND support worker and in adult social care, so I am used to adapting to each individual. Those roles taught me patience, clear communication and a strong grounding in safeguarding.</p>
+        <p>My aim is simple: every learner should leave a lesson understanding something they did not understand before, and still remember it weeks later.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="alt">
+    <div class="wrap two">
+      <div>
+        <h2>Experience</h2>
+        <ul class="timeline">
+          <li>
+            <h3>Private Tutor, GCSE Science and Maths</h3>
+            <div class="where">Think Science, Think Maths</div>
+            <p>Online small-group tutoring with a focus on exam technique and retrieval practice.</p>
+          </li>
+          <li>
+            <h3>Teacher of Physics (Trainee)</h3>
+            <div class="where">National Institute of Teaching</div>
+            <p>Planning and delivering lessons and assessing pupils' progress on placement at Laisterdyke Leadership Academy.</p>
+          </li>
+          <li>
+            <h3>SEND Support Worker</h3>
+            <div class="where">MacIntyre Academies</div>
+            <p>Supporting pupils with special educational needs and disabilities.</p>
+          </li>
+          <li>
+            <h3>Lead Adult Care Worker</h3>
+            <div class="where">Sanctuary Care</div>
+            <p>Person-centred care at Yarnton Residential and Nursing Home.</p>
+          </li>
+          <li>
+            <h3>Biomedical Engineer (Intern)</h3>
+            <div class="where">Korle-Bu Teaching Hospital, Accra</div>
+            <p>Troubleshooting and maintaining medical equipment in a clinical engineering department.</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <ul class="timeline">
+          <li>
+            <h3>PGCE, Physics</h3>
+            <div class="where">National Institute of Teaching</div>
+            <p>In progress.</p>
+          </li>
+          <li>
+            <h3>BEng Biomedical Engineering</h3>
+            <div class="where">All Nations University, Ghana</div>
+          </li>
+          <li>
+            <h3>Diploma in Adult Social Care</h3>
+            <div class="where">Oxford International Pathway College</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tutoring">
+    <div class="wrap">
+      <div class="eyebrow">Think Science, Think Maths</div>
+      <h2>Online GCSE science and maths tutoring</h2>
+      <p class="intro">Small-group sessions taught live online. Students get clear explanations, plenty of practice and the exam technique they need to turn understanding into marks.</p>
+
+      <ul class="subjects">
+        <li>GCSE Physics</li>
+        <li>GCSE Chemistry</li>
+        <li>GCSE Biology</li>
+        <li>GCSE Combined Science</li>
+        <li>GCSE Maths</li>
+      </ul>
+
+      <div class="cards">
+        <div class="card">
+          <span class="num">01</span>
+          <h3>Small groups</h3>
+          <p>Every student gets attention and the chance to ask questions, while learning from each other's thinking.</p>
+        </div>
+        <div class="card">
+          <span class="num">02</span>
+          <h3>Built to be remembered</h3>
+          <p>Lessons use regular retrieval practice, so earlier topics keep coming back until they stick.</p>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3>Parents kept informed</h3>
+          <p>Reminders before each session and an update afterwards. If you let me know ahead of a missed session, it is made up.</p>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li><strong>Message me</strong><span>Tell me your child's year group, subjects and what they find hardest.</span></li>
+        <li><strong>Find the right group</strong><span>I suggest a group and session time that suits their level.</span></li>
+        <li><strong>Start learning</strong><span>Join the live online sessions and see steady progress week by week.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>For tutoring places and pricing, or to connect professionally, send me a message.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.linkedin.com/in/benjamin-afful-bonney12" target="_blank" rel="noopener">Message me on LinkedIn</a>
+        <a class="btn ghost" href="mailto:benjaminaffulbonney@outlook.com">benjaminaffulbonney@outlook.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Benjamin Afful Bonney · Think Science, Think Maths</div>
+</footer>
+
+</body>
+</html>
